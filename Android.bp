@@ -125,6 +125,46 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcamera_ispinterface_jni.xiaomi",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/libcamera_ispinterface_jni.xiaomi.so",
+            ],
+            shared_libs: [
+                "libgui_shim_miuicamera",
+                "libandroid_runtime",
+                "libbinder",
+                "libcamera_client",
+                "libcamera_metadata",
+                "libcutils",
+                "libgui",
+                "libhidlbase",
+                "libhidltransport",
+                "liblog",
+                "libmedia",
+                "libnativehelper",
+                "libui",
+                "libutils",
+                "libvndksupport",
+                "vendor.mediatek.hardware.camera.isphal@1.0",
+                "libmtkisp_metadata_sys",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libcamera_mianode_jni.xiaomi",
 	owner: "xiaomi",
 	strip: {
@@ -153,6 +193,31 @@ cc_prebuilt_library_shared {
 	},
 	compile_multilib: "64",
 	prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkisp_metadata_sys",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/libmtkisp_metadata_sys.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
 }
 
 cc_prebuilt_library_shared {

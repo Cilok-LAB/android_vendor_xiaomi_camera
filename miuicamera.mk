@@ -41,7 +41,9 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.misys@3.0_vendor \
     vendor.xiaomi.hardware.misys@4.0_vendor \
     libcamera_algoup_jni.xiaomi \
+    libcamera_ispinterface_jni.xiaomi \
     libcamera_mianode_jni.xiaomi \
+    libmtkisp_metadata_sys \
     libmicampostproc_client \
     vendor.xiaomi.hardware.campostproc@1.0 \
     libgui-xiaomi \
